@@ -1,0 +1,25 @@
+<div class="d-flex flex-row bd-highlight mb-9">
+    <div class="p-2 w-100 bd-highlight">
+  
+
+      <div class="input-group mb-12">
+        <span class="input-group-text">Nombre</span>
+        <input type="text" class="form-control" [(ngModel)]="Nombre">
+      </div>
+      <div class="input-group mb-12">
+        <span class="input-group-text">Apellidos</span>
+        <input type="text" class="form-control" [(ngModel)]="Apellidos">
+      </div>
+      <div class="input-group mb-12">
+        <span class="input-group-text">Direccion</span>
+        <input type="text" class="form-control" [(ngModel)]="Direccion">
+      </div>
+    </div>
+  </div>
+  <button (click)="AddCliente()" *ngIf="cliente.Id == '0'" class="btn btn-primary">
+    Add
+  </button>
+  
+  <button (click)="updateCliente()" *ngIf="cliente.Id !='0'" class="btn btn-primary">
+    Update
+  </button>

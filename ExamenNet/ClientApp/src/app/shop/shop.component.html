@@ -1,0 +1,14 @@
+<h1>Carrito de compras</h1>
+  <app-carrito
+    [cartItems]="cartItems"
+    [cartTotal]="cartTotal"
+    (cartItemDeleted)="onCartItemDeleted($event)"
+    (cartItemChanged)="onCartItemChanged($event)"
+    >
+  </app-carrito>
+
+  <h1>Productos</h1>
+  <app-tiendaproducts 
+    (cartUpdated)="onCartUpdated($event)"
+    >
+  </app-tiendaproducts>

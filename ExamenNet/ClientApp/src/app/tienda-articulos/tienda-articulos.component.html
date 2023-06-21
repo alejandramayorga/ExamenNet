@@ -1,0 +1,19 @@
+<form [formGroup]="formc" (ngSubmit)="submit()">
+    <label >Tienda</label>
+    <select #tiendaSel formControlName="tiendas" id="tiendas" (change)="onSelected(tiendaSel.value)">
+      <option *ngFor="let order of tiendas; let i = index" [value]="tiendas[i].id">
+        {{tiendas[i].sucursal}}
+      </option>
+    </select>
+    <br>
+
+
+    <div *ngFor="let data of articulos; let i=index ; ">
+        <label>
+          <input type="checkbox" [value]="data.id" (change)="data.isChecked = !data.isChecked"/>
+          {{data.descripcion}}
+        </label>
+      </div>
+      <br><br>
+  <button>Guardar</button>
+  </form>

@@ -1,0 +1,33 @@
+<div class="d-flex flex-row bd-highlight mb-9">
+    <div class="p-2 w-100 bd-highlight">
+  
+
+      <div class="input-group mb-12">
+        <span class="input-group-text">Codigo</span>
+        <input type="text" class="form-control" [(ngModel)]="Codigo">
+      </div>
+      <div class="input-group mb-12">
+        <span class="input-group-text">Descripcion</span>
+        <input type="text" class="form-control" [(ngModel)]="Descripcion">
+      </div>
+      <div class="input-group mb-12">
+        <span class="input-group-text">Precio</span>
+        <input type="text" class="form-control" [(ngModel)]="Precio">
+      </div>
+<!--       <div class="input-group mb-12">
+        <span class="input-group-text">Imagen</span>
+        <input id="file" class="form-control" type="file" multiple name="uploadedDocumentFile" [(ngModel)]="Imagen" (change)="onFileSelected($event)" />
+      </div> -->
+      <div class="input-group mb-12">
+        <span class="input-group-text">Stock</span>
+        <input type="text" class="form-control" [(ngModel)]="Stock">
+      </div>
+    </div>
+  </div>
+  <button (click)="addArticle()" *ngIf="depart.DepartmentId == '0'" class="btn btn-primary">
+    Add
+  </button>
+  
+  <button (click)="updateArticle()" *ngIf="depart.DepartmentId !='0'" class="btn btn-primary">
+    Update
+  </button>
